@@ -31,12 +31,12 @@
 
   # Mysql secure installation
   # Note: Please comment this section if this playbook is not excuting first time(fix me)
-#  - name: delete anonymous MySQL server user for localhost
-#    action: mysql_user user="" host="localhost" state="absent" 
-#  - name: delete anonymous MySQL server user for localhost
-#    action: mysql_user user="" state="absent" 
-#  - name: remove the MySQL test database
-#    action: mysql_db db=test state=absent
+  - name: delete anonymous MySQL server user for localhost
+    action: mysql_user user="" host="localhost" state="absent"
+  - name: delete anonymous MySQL server user for localhost
+    action: mysql_user user="" state="absent"
+  - name: remove the MySQL test database
+    action: mysql_db db=test state=absent
 
   #Updating root permissions
   - name: update mysql root password for all root accounts
